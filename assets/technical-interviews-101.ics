@@ -1,0 +1,129 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Technical Interviews 101//University of Florida//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Technical Interviews 101
+X-WR-CALDESC:Weekly module schedule for Technical Interviews 101 at the Uni
+ versity of Florida.
+BEGIN:VEVENT
+UID:ti101-week01@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:Technical Interviews 101 - Week 1: Introduction
+DESCRIPTION:Course structure\, Edugator setup\, working with an AI coding a
+ gent\, Python and Big-O refresher.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week02@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Technical Interviews 101 - Week 2: Arrays
+DESCRIPTION:Two pointers\, sliding window\, prefix sums\, and in-place modi
+ fication.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week03@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Technical Interviews 101 - Week 3: Strings
+DESCRIPTION:Palindromes\, anagrams\, frequency maps\, parsing\, and efficie
+ nt string building.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week04@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Technical Interviews 101 - Week 4: Hash Tables
+DESCRIPTION:Dictionaries and sets\, space-for-time tradeoffs\, grouping and
+  deduplication.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week05@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Technical Interviews 101 - Week 5: Trees
+DESCRIPTION:Binary trees and BSTs\, DFS traversals\, level-order traversal\
+ , and recursion.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week06@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Technical Interviews 101 - Week 6: Priority Queues + Heaps
+DESCRIPTION:Min and max heaps\, heapq\, top-K problems\, merging sorted inp
+ uts.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week07@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Technical Interviews 101 - Week 7: Graphs
+DESCRIPTION:Adjacency lists\, BFS and DFS\, cycle detection\, topological s
+ ort\, shortest paths.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week08@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Technical Interviews 101 - Week 8: Dynamic Programming
+DESCRIPTION:Memoization vs. tabulation\, 1D and 2D DP\, knapsack and subseq
+ uence problems.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week09@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:Technical Interviews 101 - Week 9: Greedy Algorithms
+DESCRIPTION:Greedy-choice property\, interval scheduling\, and greedy vs. d
+ ynamic programming.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-week10@technical-interviews-101
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Technical Interviews 101 - Week 10: Common Interview Patterns
+DESCRIPTION:Pattern recognition\, talking through approaches\, edge cases\,
+  and mock interviews.
+LOCATION:Edugator (edugator.app)
+URL:https://edugator.app
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
