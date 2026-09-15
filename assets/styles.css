@@ -845,6 +845,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   border: 1px solid rgba(20, 41, 79, 0.08);
   box-shadow: 0 1px 2px rgba(20, 41, 79, 0.05);
   flex-shrink: 0;
+  min-width: 0;
   max-width: 100%;
 }
 .contact-card-label {
@@ -917,8 +918,12 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   .hero-panel { max-width: 480px; }
 }
 
-@media (max-width: 1000px) {
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1040px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 620px;
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 860px) {
@@ -937,6 +942,21 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   .feature-banner { flex-direction: column; align-items: flex-start; text-align: left; }
   .about-inner { grid-template-columns: 1fr; }
   .schedule-body ul { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+  .contact-card { padding: 1.5rem 1.25rem; }
+  .contact-card .btn {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -986,6 +1006,5 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   .hero { padding: 5rem 0 4rem; }
   .logo-sub { display: none; }
   .logo-title { font-size: 1rem; }
-  .team-grid { grid-template-columns: 1fr; }
   .team-card { padding: 1.75rem 1.25rem; }
 }
