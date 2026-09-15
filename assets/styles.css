@@ -135,19 +135,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   gap: 0.7rem;
   min-width: 0;
 }
+/* The mark carries its own speech-bubble silhouette, so no tile behind it. */
 .logo-mark {
-  display: grid;
-  place-items: center;
   flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  background: var(--primary);
-  color: var(--white);
-  border-radius: 0.5rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
+  width: auto;
+  height: 42px;
 }
 .logo-lines {
   display: flex;
