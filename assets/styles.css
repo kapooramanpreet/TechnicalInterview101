@@ -100,7 +100,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1.5rem;
   height: var(--header-h);
 }
@@ -110,11 +109,13 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   gap: 1rem;
   min-width: 0;
 }
+/* pushed hard right; the nav keeps its place beside the wordmark */
 .header-units {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding-left: 1rem;
+  margin-left: auto;
+  padding-left: 1.25rem;
   border-left: 1px solid rgba(20, 41, 79, 0.15);
 }
 .header-units img {
@@ -182,6 +183,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
 .site-nav a[aria-current="page"] { opacity: 1; font-weight: 600; color: var(--primary); }
 
 .nav-toggle {
+  margin-left: auto;
   display: none;
   width: 40px;
   height: 40px;
@@ -978,6 +980,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
 
 @media (max-width: 1180px) {
   .header-units { display: none; }
+  .site-nav { margin-left: auto; }
 }
 
 @media (max-width: 640px) {

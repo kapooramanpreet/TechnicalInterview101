@@ -1,18 +1,18 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Technical Interviews 101//University of Florida//EN
+PRODID:-//Technical Interview 101//University of Florida//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Technical Interviews 101
-X-WR-CALDESC:Weekly module schedule for Technical Interviews 101 at the Uni
- versity of Florida. Fall 2026 covers weeks 1-8\; weeks 9-10 continue in Sp
- ring 2027 (dates to be announced).
+X-WR-CALNAME:Technical Interview 101
+X-WR-CALDESC:Weekly module schedule for Technical Interview 101 at the Univ
+ ersity of Florida. Fall 2026 covers weeks 1-8\; weeks 9-10 continue in Spr
+ ing 2027 (dates to be announced).
 BEGIN:VEVENT
 UID:ti101-week01@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
-SUMMARY:Technical Interviews 101 - Week 1: Introduction
+SUMMARY:Technical Interview 101 - Week 1: Introduction
 DESCRIPTION:Course structure\, Edugator setup\, working with an AI coding a
  gent\, Python and Big-O refresher.
 LOCATION:Edugator (edugator.app)
@@ -21,10 +21,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week02@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-SUMMARY:Technical Interviews 101 - Week 2: Arrays
+SUMMARY:Technical Interview 101 - Week 2: Arrays
 DESCRIPTION:Two pointers\, sliding window\, prefix sums\, and in-place modi
  fication.
 LOCATION:Edugator (edugator.app)
@@ -33,10 +33,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week03@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
-SUMMARY:Technical Interviews 101 - Week 3: Strings
+SUMMARY:Technical Interview 101 - Week 3: Strings
 DESCRIPTION:Palindromes\, anagrams\, frequency maps\, parsing\, and efficie
  nt string building.
 LOCATION:Edugator (edugator.app)
@@ -45,10 +45,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week04@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
-SUMMARY:Technical Interviews 101 - Week 4: Hash Tables
+SUMMARY:Technical Interview 101 - Week 4: Hash Tables
 DESCRIPTION:Dictionaries and sets\, space-for-time tradeoffs\, grouping and
   deduplication.
 LOCATION:Edugator (edugator.app)
@@ -57,10 +57,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week05@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
-SUMMARY:Technical Interviews 101 - Week 5: Trees
+SUMMARY:Technical Interview 101 - Week 5: Trees
 DESCRIPTION:Binary trees and BSTs\, DFS traversals\, level-order traversal\
  , and recursion.
 LOCATION:Edugator (edugator.app)
@@ -69,10 +69,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week06@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
-SUMMARY:Technical Interviews 101 - Week 6: Priority Queues + Heaps
+SUMMARY:Technical Interview 101 - Week 6: Priority Queues + Heaps
 DESCRIPTION:Min and max heaps\, heapq\, top-K problems\, merging sorted inp
  uts.
 LOCATION:Edugator (edugator.app)
@@ -81,10 +81,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week07@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-SUMMARY:Technical Interviews 101 - Week 7: Graphs
+SUMMARY:Technical Interview 101 - Week 7: Graphs
 DESCRIPTION:Adjacency lists\, BFS and DFS\, cycle detection\, topological s
  ort\, shortest paths.
 LOCATION:Edugator (edugator.app)
@@ -93,10 +93,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-week08@technical-interviews-101
-DTSTAMP:20260914T120000Z
+DTSTAMP:20260915T120000Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
-SUMMARY:Technical Interviews 101 - Week 8: Dynamic Programming
+SUMMARY:Technical Interview 101 - Week 8: Dynamic Programming
 DESCRIPTION:Memoization vs. tabulation\, 1D and 2D DP\, knapsack and subseq
  uence problems.
 LOCATION:Edugator (edugator.app)
