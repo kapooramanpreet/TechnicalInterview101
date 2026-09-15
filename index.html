@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Anybody:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Lato:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet"
   />
 
@@ -24,13 +24,31 @@
   <header class="site-header">
     <div class="header-rule" aria-hidden="true"></div>
     <div class="container header-inner">
-      <a class="logo" href="#top">
-        <span class="logo-mark">TI</span>
-        <span class="logo-lines">
-          <span class="logo-title">Technical Interviews 101</span>
-          <span class="logo-sub">Procter &amp; Gamble &middot; University of Florida</span>
+      <div class="header-brand">
+        <a class="logo" href="#top">
+          <span class="logo-mark">TI</span>
+          <span class="logo-lines">
+            <span class="logo-title">Technical Interviews 101</span>
+            <span class="logo-sub">University of Florida &middot; Sponsored by P&amp;G</span>
+          </span>
+        </a>
+        <!--
+          The units are named in full in the #partners strip below, so these
+          repeat decorations are hidden from assistive tech.
+        -->
+        <span class="header-units" aria-hidden="true">
+          <span class="uf-lockup uf-lockup-sm">
+            <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
+            <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
+            <span class="uf-lockup-unit">CISE</span>
+          </span>
+          <span class="uf-lockup uf-lockup-sm">
+            <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
+            <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
+            <span class="uf-lockup-unit">EEd</span>
+          </span>
         </span>
-      </a>
+      </div>
       <nav class="site-nav" id="site-nav">
         <a href="#features">Features</a>
         <a href="#schedule">Schedule</a>
@@ -93,6 +111,57 @@
       </div>
     </section>
 
+    <!--
+      PARTNER LOGOS. The two UF unit signatures are rebuilt here from the official
+      UF monogram (assets/logos/uf-monogram.png) plus type, because the college's
+      packaged CISE / EEd lockup files are not publicly downloadable. If you can get
+      the real artwork from the flyer designer, replace the .uf-lockup markup with a
+      single <img> per unit -- nothing else depends on this structure.
+    -->
+    <section class="partners" aria-label="Course partners and sponsor">
+      <div class="container partners-inner">
+        <p class="partners-label">Presented by</p>
+
+        <ul class="partners-list">
+          <li>
+            <span class="uf-lockup">
+              <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
+              <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
+              <span class="uf-lockup-unit">CISE</span>
+            </span>
+            <span class="sr-only">
+              University of Florida Herbert Wertheim College of Engineering &mdash; Department of
+              Computer &amp; Information Science &amp; Engineering
+            </span>
+          </li>
+
+          <li>
+            <span class="uf-lockup">
+              <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
+              <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
+              <span class="uf-lockup-unit">EEd</span>
+            </span>
+            <span class="sr-only">
+              University of Florida Herbert Wertheim College of Engineering &mdash; Engineering Education
+            </span>
+          </li>
+
+          <li class="partner-pg">
+            <img
+              src="assets/logos/procter-and-gamble.svg"
+              alt="Procter &amp; Gamble"
+              width="86"
+              height="86"
+            />
+          </li>
+        </ul>
+
+        <p class="partners-note">
+          Supported by the <strong>Procter &amp; Gamble Higher Education Grant</strong>.
+        </p>
+      </div>
+    </section>
+
     <section class="features" id="features">
       <div class="container">
         <p class="eyebrow eyebrow-center">Why this course</p>
@@ -117,7 +186,7 @@
           </article>
 
           <article class="feature-card bento-b">
-            <div class="feature-icon" style="--icon-color: var(--primary)">
+            <div class="feature-icon" style="--icon-color: var(--moss)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
                 <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H12v16H6.5A2.5 2.5 0 0 1 4 17.5v-11Z"/>
                 <path d="M20 6.5A2.5 2.5 0 0 0 17.5 4H12v16h5.5a2.5 2.5 0 0 0 2.5-2.5v-11Z"/>
@@ -140,7 +209,7 @@
           </article>
 
           <article class="feature-card bento-d">
-            <div class="feature-icon" style="--icon-color: var(--primary)">
+            <div class="feature-icon" style="--icon-color: var(--moss)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
                 <path d="M3 3v16a2 2 0 0 0 2 2h16" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M7 15l4-5 3 3 5-7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -178,8 +247,11 @@
     </section>
 
     <!--
-      SCHEDULE DATES: sessions are set to Wednesdays, Sep 16 - Nov 18, 2026.
-      If the real meeting dates or times differ, update them BOTH here and in
+      SCHEDULE DATES: Fall 2026 runs weeks 1-8 on Mondays, Oct 5 - Nov 23, 2026
+      (week 8 lands the Monday of Thanksgiving week). Weeks 9-10 continue in
+      Spring 2027; those dates are not set yet, so they are marked "Spring 2027"
+      here and are intentionally absent from the .ics file.
+      If the real meeting dates or times change, update them BOTH here and in
       assets/technical-interviews-101.ics so the calendar download stays in sync.
     -->
     <section class="schedule" id="schedule">
@@ -187,8 +259,9 @@
         <p class="eyebrow eyebrow-center">Course schedule</p>
         <h2>Ten weeks, ten modules</h2>
         <p class="section-sub">
-          One module per week, each pairing a short lesson with hands-on problems on Edugator. Expand any
-          week to see what it covers.
+          One module per week, each pairing a short lesson with hands-on problems on Edugator. Weeks 1&ndash;8
+          run this fall and wrap up at Thanksgiving; weeks 9&ndash;10 continue in the spring. Expand any week
+          to see what it covers.
         </p>
 
         <div class="schedule-actions">
@@ -204,13 +277,18 @@
           </p>
         </div>
 
+        <h3 class="schedule-term">
+          Fall 2026
+          <span>Weeks 1&ndash;8 &middot; Mondays, Oct 5 &ndash; Nov 23</span>
+        </h3>
+
         <ol class="schedule-list">
           <li>
             <details class="schedule-item">
               <summary>
                 <span class="schedule-week">Week 1</span>
                 <span class="schedule-title">Introduction</span>
-                <span class="schedule-date">Sep 16, 2026</span>
+                <span class="schedule-date">Oct 5, 2026</span>
                 <span class="schedule-count">1 lesson</span>
               </summary>
               <div class="schedule-body">
@@ -230,7 +308,7 @@
               <summary>
                 <span class="schedule-week">Week 2</span>
                 <span class="schedule-title">Arrays</span>
-                <span class="schedule-date">Sep 23, 2026</span>
+                <span class="schedule-date">Oct 12, 2026</span>
                 <span class="schedule-count">8 problems</span>
               </summary>
               <div class="schedule-body">
@@ -250,7 +328,7 @@
               <summary>
                 <span class="schedule-week">Week 3</span>
                 <span class="schedule-title">Strings</span>
-                <span class="schedule-date">Sep 30, 2026</span>
+                <span class="schedule-date">Oct 19, 2026</span>
                 <span class="schedule-count">7 problems</span>
               </summary>
               <div class="schedule-body">
@@ -270,7 +348,7 @@
               <summary>
                 <span class="schedule-week">Week 4</span>
                 <span class="schedule-title">Hash Tables</span>
-                <span class="schedule-date">Oct 7, 2026</span>
+                <span class="schedule-date">Oct 26, 2026</span>
                 <span class="schedule-count">7 problems</span>
               </summary>
               <div class="schedule-body">
@@ -290,7 +368,7 @@
               <summary>
                 <span class="schedule-week">Week 5</span>
                 <span class="schedule-title">Trees</span>
-                <span class="schedule-date">Oct 14, 2026</span>
+                <span class="schedule-date">Nov 2, 2026</span>
                 <span class="schedule-count">7 problems</span>
               </summary>
               <div class="schedule-body">
@@ -310,7 +388,7 @@
               <summary>
                 <span class="schedule-week">Week 6</span>
                 <span class="schedule-title">Priority Queues + Heaps</span>
-                <span class="schedule-date">Oct 21, 2026</span>
+                <span class="schedule-date">Nov 9, 2026</span>
                 <span class="schedule-count">7 problems</span>
               </summary>
               <div class="schedule-body">
@@ -330,7 +408,7 @@
               <summary>
                 <span class="schedule-week">Week 7</span>
                 <span class="schedule-title">Graphs</span>
-                <span class="schedule-date">Oct 28, 2026</span>
+                <span class="schedule-date">Nov 16, 2026</span>
                 <span class="schedule-count">7 problems</span>
               </summary>
               <div class="schedule-body">
@@ -350,7 +428,7 @@
               <summary>
                 <span class="schedule-week">Week 8</span>
                 <span class="schedule-title">Dynamic Programming</span>
-                <span class="schedule-date">Nov 4, 2026</span>
+                <span class="schedule-date">Nov 23, 2026</span>
                 <span class="schedule-count">7 problems</span>
               </summary>
               <div class="schedule-body">
@@ -365,12 +443,20 @@
             </details>
           </li>
 
+        </ol>
+
+        <h3 class="schedule-term">
+          Spring 2027
+          <span>Weeks 9&ndash;10 &middot; Dates to be announced</span>
+        </h3>
+
+        <ol class="schedule-list" start="9">
           <li>
             <details class="schedule-item">
               <summary>
                 <span class="schedule-week">Week 9</span>
                 <span class="schedule-title">Greedy Algorithms</span>
-                <span class="schedule-date">Nov 11, 2026</span>
+                <span class="schedule-date schedule-date-tba">Spring 2027</span>
                 <span class="schedule-count">6 problems</span>
               </summary>
               <div class="schedule-body">
@@ -390,7 +476,7 @@
               <summary>
                 <span class="schedule-week">Week 10</span>
                 <span class="schedule-title">Common Interview Patterns</span>
-                <span class="schedule-date">Nov 18, 2026</span>
+                <span class="schedule-date schedule-date-tba">Spring 2027</span>
                 <span class="schedule-count">6 problems</span>
               </summary>
               <div class="schedule-body">
