@@ -122,6 +122,12 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   height: 54px;
   border-radius: 0.2rem;
 }
+/* the roundel reads heavier than the square tiles, so it sits a little smaller */
+.header-pg {
+  height: 44px;
+  margin-left: 0.35rem;
+  border-radius: 0;
+}
 .logo {
   display: inline-flex;
   align-items: center;
