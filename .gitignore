@@ -3,3 +3,11 @@ TODO.md
 
 # macOS
 .DS_Store
+
+# Unoptimized source images dropped in the repo root. The web-ready crops that
+# the page actually loads live in assets/team/ and assets/logos/.
+/*.PNG
+/*.png
+/*.jpg
+/*.jpeg
+/*.heic
