@@ -33,20 +33,12 @@
           </span>
         </a>
         <!--
-          The units are named in full in the #partners strip below, so these
-          repeat decorations are hidden from assistive tech.
+          The units are named in full in the partners strip below, so these
+          repeat marks are hidden from assistive tech.
         -->
         <span class="header-units" aria-hidden="true">
-          <span class="uf-lockup uf-lockup-sm">
-            <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
-            <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
-            <span class="uf-lockup-unit">CISE</span>
-          </span>
-          <span class="uf-lockup uf-lockup-sm">
-            <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
-            <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
-            <span class="uf-lockup-unit">EEd</span>
-          </span>
+          <img src="assets/logos/uf-cise.png" alt="" width="144" height="143" />
+          <img src="assets/logos/uf-eed.png" alt="" width="143" height="143" />
         </span>
       </div>
       <nav class="site-nav" id="site-nav">
@@ -112,11 +104,9 @@
     </section>
 
     <!--
-      PARTNER LOGOS. The two UF unit signatures are rebuilt here from the official
-      UF monogram (assets/logos/uf-monogram.png) plus type, because the college's
-      packaged CISE / EEd lockup files are not publicly downloadable. If you can get
-      the real artwork from the flyer designer, replace the .uf-lockup markup with a
-      single <img> per unit -- nothing else depends on this structure.
+      PARTNER LOGOS. The two UF unit signatures were cropped from the course flyer
+      (the highest-resolution copy available); if higher-res originals turn up, drop
+      them in at the same paths and nothing else needs to change.
     -->
     <section class="partners" aria-label="Course partners and sponsor">
       <div class="container partners-inner">
@@ -124,26 +114,23 @@
 
         <ul class="partners-list">
           <li>
-            <span class="uf-lockup">
-              <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
-              <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
-              <span class="uf-lockup-unit">CISE</span>
-            </span>
-            <span class="sr-only">
-              University of Florida Herbert Wertheim College of Engineering &mdash; Department of
-              Computer &amp; Information Science &amp; Engineering
-            </span>
+            <img
+              class="partner-logo"
+              src="assets/logos/uf-cise.png"
+              alt="University of Florida Herbert Wertheim College of Engineering &mdash; Computer &amp; Information Science &amp; Engineering"
+              width="144"
+              height="143"
+            />
           </li>
 
           <li>
-            <span class="uf-lockup">
-              <img class="uf-lockup-mark" src="assets/logos/uf-monogram.png" alt="" width="70" height="70" />
-              <span class="uf-lockup-college">Herbert Wertheim<br />College <em>of</em> Engineering</span>
-              <span class="uf-lockup-unit">EEd</span>
-            </span>
-            <span class="sr-only">
-              University of Florida Herbert Wertheim College of Engineering &mdash; Engineering Education
-            </span>
+            <img
+              class="partner-logo"
+              src="assets/logos/uf-eed.png"
+              alt="University of Florida Herbert Wertheim College of Engineering &mdash; Engineering Education"
+              width="143"
+              height="143"
+            />
           </li>
 
           <li class="partner-pg">
