@@ -620,18 +620,26 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   font-size: 0.8rem;
   color: var(--faint);
 }
+/*
+  Open panel: the summary above it spans the full row, so a narrow measure here
+  left most of the width empty. The blurb and the bullets now sit side by side
+  and the bullets get a single wide column, so each one stays on one line.
+*/
 .schedule-body {
-  padding: 0.25rem 0.25rem 1.9rem 5.5rem;
-  max-width: 68ch;
+  padding: 0.5rem 0.25rem 2.1rem 5.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 0.75rem 3.5rem;
+  align-items: start;
 }
-.schedule-body p { margin: 0 0 1rem; color: var(--muted); }
+.schedule-body p { margin: 0; color: var(--muted); max-width: 46ch; }
 .schedule-body ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem 2rem;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
 }
 .schedule-body li {
   position: relative;
@@ -789,6 +797,22 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   font-size: 1.2rem;
 }
 
+.sponsor-note {
+  margin: 3.5rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--faint);
+}
+.sponsor-note a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.sponsor-note a:hover { color: var(--accent); }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1080px) {
@@ -837,7 +861,11 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   .cohort-grid { grid-template-columns: 1fr; gap: 0; }
   .cohort-card { padding-left: 0; padding-right: 0; }
   .cohort-card + .cohort-card { border-left: none; }
-  .schedule-body ul { grid-template-columns: 1fr; }
+  .schedule-body {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .schedule-body p { max-width: none; }
 }
 
 @media (max-width: 720px) {
