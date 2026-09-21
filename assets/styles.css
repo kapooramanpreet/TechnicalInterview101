@@ -123,12 +123,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   height: 54px;
   border-radius: 0.2rem;
 }
-/* the roundel reads heavier than the square tiles, so it sits a little smaller */
-.header-pg {
-  height: 44px;
-  margin-left: 0.35rem;
-  border-radius: 0;
-}
 .logo {
   display: inline-flex;
   align-items: center;
@@ -352,7 +346,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   height: auto;
   border-radius: 0.3rem;
 }
-.partner-pg img { width: 86px; height: 86px; }
 
 /* Features */
 .features { padding: 6rem 0; background: var(--surface); }
