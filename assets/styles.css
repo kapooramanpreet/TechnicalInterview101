@@ -356,7 +356,8 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   color: var(--muted);
 }
 .claim figcaption {
-  max-width: 58ch;
+  /* Wide enough for the reference to sit on two lines. */
+  max-width: 96ch;
   line-height: 1.65;
 }
 .claim figcaption cite { font-style: italic; }
@@ -370,41 +371,30 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 .claim figcaption a:hover { color: var(--accent); }
 
 
-/* A student's own account, set apart from the research finding above it. */
-.voice {
-  margin: 3.5rem 0 0;
-  padding: 2.5rem 2.75rem;
-  background: var(--surface);
-  border-radius: var(--radius);
+/*
+  The second quote mirrors the first: same type, rule flipped to the right and
+  the block pushed over, so the two zig-zag down the section.
+*/
+.claim-right {
+  /* Wider than the first quote so the longer excerpt stays a few lines,
+     with a left indent keeping the zig-zag visible. */
+  margin: 4rem 0 0 auto;
+  width: min(100%, 940px);
+  max-width: none;
+  padding: 0 2rem 0 0;
+  border-left: none;
+  border-right: 3px solid var(--accent);
+  text-align: right;
 }
-.voice blockquote {
-  margin: 0;
-  max-width: 68ch;
-}
-.voice blockquote p {
-  margin: 0 0 1.1rem;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--ink);
-}
-.voice blockquote p:last-child { margin-bottom: 0; }
-.voice figcaption {
-  margin-top: 1.75rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--rule);
-  max-width: 68ch;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--muted);
-}
-.voice-who { font-weight: 600; color: var(--ink); }
-.voice-cite {
+.claim-right blockquote { margin-left: auto; max-width: none; }
+.claim-right figcaption { margin-left: auto; }
+.claim-source {
   display: block;
   margin-top: 0.6rem;
   font-size: 0.82rem;
   color: var(--faint);
 }
-.voice-cite cite { font-style: italic; }
+.claim-source cite { font-style: italic; }
 
 /* ---------- A single session ---------- */
 
@@ -497,8 +487,12 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
 }
-.cohort-card { padding: 1.6rem 2rem 1.6rem 0; border-top: 2px solid var(--ink); }
-.cohort-card + .cohort-card { padding-left: 2rem; border-left: 1px solid var(--rule); }
+.cohort-card {
+  padding: 1.6rem 2rem;
+  border-top: 2px solid var(--ink);
+  text-align: center;
+}
+.cohort-card + .cohort-card { border-left: 1px solid var(--rule); }
 .cohort-term {
   margin: 0 0 0.7rem;
   font-family: var(--font-body);
@@ -837,8 +831,8 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 
   .anatomy-facts { grid-template-columns: 1fr; }
   .cohort-grid { grid-template-columns: 1fr; gap: 0; }
-  .cohort-card { padding-right: 0; }
-  .cohort-card + .cohort-card { padding-left: 0; border-left: none; }
+  .cohort-card { padding-left: 0; padding-right: 0; }
+  .cohort-card + .cohort-card { border-left: none; }
   .schedule-body ul { grid-template-columns: 1fr; }
 }
 
@@ -853,7 +847,15 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   .contact { padding-bottom: 4rem; }
   .anatomy { margin-top: 4rem; }
   .claim { padding-left: 1.25rem; }
-  .voice { padding: 1.75rem 1.5rem; }
+  .claim-right {
+    margin-left: 0;
+    padding: 0 0 0 1.25rem;
+    border-right: none;
+    border-left: 3px solid var(--accent);
+    text-align: left;
+  }
+  .claim-right blockquote,
+  .claim-right figcaption { margin-left: 0; }
 
   .schedule-term-ics { margin-left: 0; }
   .schedule-item summary {
