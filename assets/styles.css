@@ -426,7 +426,7 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 }
 .anatomy-head-row h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.95rem);
-  flex-shrink: 0;
+  min-width: 0;
 }
 .anatomy-head-row .lede {
   margin: 0;
@@ -436,7 +436,7 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 
 .flow {
   list-style: none;
-  margin: 0 0 3rem;
+  margin: 0;
   padding: 0;
   counter-reset: flow;
   display: grid;
@@ -501,52 +501,6 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 }
 .flow h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
 .flow li > p:last-child { margin: 0; color: var(--muted); font-size: 0.97rem; }
-
-.anatomy-facts {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--rule);
-}
-.anatomy-facts li { background: var(--surface); padding: 2rem 2.2rem; }
-.anatomy-fact-val {
-  margin: 0;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
-  letter-spacing: -0.03em;
-  color: var(--primary);
-}
-.anatomy-fact-key {
-  margin: 0.4rem 0 0.9rem;
-  font-family: var(--font-body);
-  font-weight: 510;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--faint);
-}
-.anatomy-facts li > p:last-child { margin: 0; color: var(--muted); font-size: 0.97rem; }
-
-/* Inline links in body copy on light grounds. */
-.flow a,
-.anatomy-facts a,
-.schedule-body a,
-.join-copy a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  transition: color 0.15s ease;
-}
-.flow a:hover,
-.anatomy-facts a:hover,
-.schedule-body a:hover,
-.join-copy a:hover { color: var(--accent); }
 
 /* ---------- Schedule ---------- */
 
@@ -940,7 +894,6 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   .site-nav > a:not(.btn)::after { display: none; }
   .site-nav .btn { margin-top: 1rem; justify-content: center; }
 
-  .anatomy-facts { grid-template-columns: 1fr; }
   .cohort-grid { grid-template-columns: 1fr; gap: 0; }
   .cohort-card { padding-left: 0; padding-right: 0; }
   .cohort-card + .cohort-card { border-left: none; }

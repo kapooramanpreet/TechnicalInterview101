@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Progressive reveal. Everything is visible by default; this only adds the
   // fade-up when IntersectionObserver is available.
   const revealables = document.querySelectorAll(
-    '.claim, .flow li, .anatomy-facts li, .cohort-card, .team-card'
+    '.claim, .flow li, .cohort-card, .team-card'
   );
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(
