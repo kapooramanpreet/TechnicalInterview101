@@ -5,9 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Technical Interview 101 Workshop Series
 X-WR-TIMEZONE:America/New_York
-X-WR-CALDESC:Meeting times for the Technical Interview 101 workshop series.
-  Two cohorts\, Fall 2026 and Spring 2027\, each covering the same 10 works
- hops. Wednesdays\, 5:30-7:00 p.m. Eastern.
+X-WR-CALDESC:Meeting times for the Fall 2026 cohort of the Technical Interv
+ iew 101 workshop series - Wednesdays\, 5:30-7:00 p.m. Eastern\, Oct 7 to N
+ ov 25\, 2026. Ten workshops condensed into eight sessions. Start date is t
+ entative. The Spring 2027 cohort runs Jan 20 to Apr 7\, 2027\; its individ
+ ual dates are not set yet.
 BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -26,31 +28,99 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ti101-fall-2026@technical-interviews-101
+UID:ti101-fall2026-w01@technical-interviews-101
 DTSTAMP:20260921T120000Z
 DTSTART;TZID=America/New_York:20261007T173000
 DTEND;TZID=America/New_York:20261007T190000
-RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261202T223000Z
-SUMMARY:Technical Interview 101 - Fall 2026 Cohort
-DESCRIPTION:A weekly\, 90-minute in-person workshop in the Technical Interv
- iew 101 series (10 workshops). Sessions pair a short lesson with hands-on 
- practice on Edugator. A self-paced remote option with AI assistance is als
- o available.
+SUMMARY:Technical Interview 101 - Workshop 1: Introduction + Arrays
+DESCRIPTION:Series structure\, Edugator setup\, working with an AI coding a
+ gent\, Python and Big-O refresher\, then two pointers\, sliding window\, p
+ refix sums\, and in-place modification.
 LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
 URL:https://edugator.app/
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:ti101-spring-2027@technical-interviews-101
+UID:ti101-fall2026-w02@technical-interviews-101
 DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20270120T173000
-DTEND;TZID=America/New_York:20270120T190000
-RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270407T213000Z
-SUMMARY:Technical Interview 101 - Spring 2027 Cohort
-DESCRIPTION:A weekly\, 90-minute in-person workshop in the Technical Interv
- iew 101 series (10 workshops). Sessions pair a short lesson with hands-on 
- practice on Edugator. A self-paced remote option with AI assistance is als
- o available.
+DTSTART;TZID=America/New_York:20261014T173000
+DTEND;TZID=America/New_York:20261014T190000
+SUMMARY:Technical Interview 101 - Workshop 2: Strings
+DESCRIPTION:Palindromes\, anagrams\, frequency maps\, parsing\, and efficie
+ nt string building.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-w03@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261021T173000
+DTEND;TZID=America/New_York:20261021T190000
+SUMMARY:Technical Interview 101 - Workshop 3: Hash Tables
+DESCRIPTION:Dictionaries and sets\, space-for-time tradeoffs\, grouping and
+  deduplication.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-w04@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261028T173000
+DTEND;TZID=America/New_York:20261028T190000
+SUMMARY:Technical Interview 101 - Workshop 4: Trees
+DESCRIPTION:Binary trees and BSTs\, DFS traversals\, level-order traversal\
+ , and recursion.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-w05@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261104T173000
+DTEND;TZID=America/New_York:20261104T190000
+SUMMARY:Technical Interview 101 - Workshop 5: Priority Queues + Heaps
+DESCRIPTION:Min and max heaps\, heapq\, top-K problems\, merging sorted inp
+ uts.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-w06@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261111T173000
+DTEND;TZID=America/New_York:20261111T190000
+SUMMARY:Technical Interview 101 - Workshop 6: Graphs
+DESCRIPTION:Adjacency lists\, BFS and DFS\, cycle detection\, topological s
+ ort\, shortest paths.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-w07@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261118T173000
+DTEND;TZID=America/New_York:20261118T190000
+SUMMARY:Technical Interview 101 - Workshop 7: Dynamic Programming + Greedy
+DESCRIPTION:Memoization vs. tabulation\, 1D and 2D DP\, knapsack and subseq
+ uence problems\, the greedy-choice property\, and greedy vs. DP.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-w08@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261125T173000
+DTEND;TZID=America/New_York:20261125T190000
+SUMMARY:Technical Interview 101 - Workshop 8: Common Interview Patterns
+DESCRIPTION:Pattern recognition under time pressure\, talking through your 
+ approach\, clarifying questions and edge cases\, and mock interview practi
+ ce.
 LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
 URL:https://edugator.app/
 TRANSP:OPAQUE

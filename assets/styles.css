@@ -516,6 +516,26 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   padding: 0.1rem 0.3rem;
 }
 
+.schedule-term {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.85rem;
+  margin: 0 0 1.1rem;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+.schedule-term + .schedule-list + .schedule-term { margin-top: 2.75rem; }
+.schedule-term span {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(20, 41, 79, 0.55);
+}
+.schedule-date-tba { font-style: italic; }
+
 /* Cohort cards */
 .cohort-grid {
   list-style: none;
@@ -552,6 +572,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   margin: 0;
   font-size: 0.9rem;
   color: rgba(20, 41, 79, 0.65);
+}
+.cohort-count {
+  margin: 0.45rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(20, 41, 79, 0.5);
 }
 
 .schedule-list {
@@ -1038,6 +1066,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
     padding: 1rem 1.25rem;
   }
   .schedule-title { flex: 1 1 100%; order: 4; }
+  .schedule-date { order: 1; }
   .schedule-count {
     order: 2;
     border-left: none;
