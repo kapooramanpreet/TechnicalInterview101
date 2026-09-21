@@ -219,7 +219,6 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 }
 .header-units a:hover { opacity: 1; }
 .header-units img { width: auto; height: 51px; }
-.header-pg { height: 45px !important; }
 
 .nav-toggle {
   display: none;
