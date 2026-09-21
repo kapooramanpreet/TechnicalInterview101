@@ -338,11 +338,15 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   padding: 0 0 0 2rem;
   border-left: 3px solid var(--accent);
 }
+.claim blockquote p {
+  margin: 0 0 1.1rem;
+}
+.claim blockquote p:last-child { margin-bottom: 0; }
 .claim blockquote {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-size: clamp(0.92rem, 1.92vw, 1.2rem);
   line-height: 1.45;
   letter-spacing: -0.015em;
   max-width: 44ch;
