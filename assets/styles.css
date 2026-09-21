@@ -264,7 +264,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Hero panel (course-at-a-glance card) */
+/* Hero panel (series-at-a-glance card) */
 .hero-panel {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -308,6 +308,16 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   font-size: 1.02rem;
   color: var(--white);
 }
+.hero-sub a,
+.hero-panel-val a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+.hero-sub a:hover,
+.hero-panel-val a:hover { color: var(--accent); text-decoration-color: currentColor; }
 
 /* Partner logos */
 .partners {
@@ -370,6 +380,20 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   color: rgba(20, 41, 79, 0.65);
   font-size: 1.05rem;
 }
+
+.feature-card a {
+  color: var(--moss);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.feature-card a:hover { color: var(--accent); }
+.about-card-value a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(20, 41, 79, 0.35);
+  text-underline-offset: 3px;
+}
+.about-card-value a:hover { color: var(--accent); }
 
 /* Bento grid */
 .bento-grid {
@@ -492,25 +516,43 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   padding: 0.1rem 0.3rem;
 }
 
-.schedule-term {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.3rem 0.85rem;
-  margin: 0 0 1.1rem;
-  font-size: 1.3rem;
-  color: var(--primary);
+/* Cohort cards */
+.cohort-grid {
+  list-style: none;
+  margin: 0 auto 2.5rem;
+  padding: 0;
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
-.schedule-term + .schedule-list + .schedule-term { margin-top: 2.75rem; }
-.schedule-term span {
+.cohort-card {
+  background: var(--card);
+  border: 1px solid rgba(20, 41, 79, 0.1);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  text-align: center;
+}
+.cohort-term {
+  margin: 0 0 0.55rem;
   font-family: var(--font-mono);
-  font-weight: 400;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(20, 41, 79, 0.55);
+  color: var(--accent);
 }
-.schedule-date-tba { font-style: italic; }
+.cohort-dates {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.cohort-time {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(20, 41, 79, 0.65);
+}
 
 .schedule-list {
   list-style: none;
@@ -778,7 +820,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
 }
 .about-card-desc { margin: 0; color: rgba(20, 41, 79, 0.65); font-size: 0.92rem; }
 
-/* Join the course */
+/* Interest form */
 .join {
   position: relative;
   overflow: hidden;
@@ -809,8 +851,40 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   color: rgba(255, 255, 255, 0.85);
   font-size: 1.05rem;
   line-height: 1.65;
-  margin: 0 0 2rem;
+  margin: 0 0 1.35rem;
 }
+.join-formats-label {
+  margin: 0 0 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.join-formats {
+  list-style: none;
+  width: 100%;
+  margin: 0 0 1.35rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+}
+.join-formats li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+.join-format-name {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+.join-inner .btn-lg { margin-top: 0.75rem; }
 .join-note {
   margin: 1rem 0 0;
   font-family: var(--font-mono);
@@ -912,6 +986,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
   .hero-panel { max-width: 480px; }
 }
 
+@media (max-width: 620px) {
+  .cohort-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 1040px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -960,7 +1038,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4px); }
     padding: 1rem 1.25rem;
   }
   .schedule-title { flex: 1 1 100%; order: 4; }
-  .schedule-date { order: 1; }
   .schedule-count {
     order: 2;
     border-left: none;
