@@ -331,6 +331,13 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 /* ---------- Program ---------- */
 
 .program { padding: 6rem 0; }
+/* This heading sits on one line and the lede runs the full width under the
+   rule, rather than stopping at the shared measure. */
+.program .section-head h2 {
+  max-width: none;
+  font-size: clamp(1.4rem, 2.9vw, 2.15rem);
+}
+.program .section-head .lede { max-width: none; }
 
 /* The one claim the whole series rests on, set as a pull quote. */
 .claim {
@@ -403,26 +410,88 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 /* ---------- A single session ---------- */
 
 .anatomy { margin-top: 6rem; }
-.anatomy .section-head { margin-bottom: 3rem; }
 
-.anatomy-steps {
+/*
+  The session as a process: a rail runs across the three stages with a numbered
+  node on each. Heading and lede share one line above it, with no rule, so the
+  block reads as a diagram rather than as another section.
+*/
+.anatomy-head { margin-bottom: 2.75rem; }
+.anatomy-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.75rem;
+  margin-top: 0.6rem;
+}
+.anatomy-head-row h2 {
+  font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+  flex-shrink: 0;
+}
+.anatomy-head-row .lede {
+  margin: 0;
+  font-size: 0.98rem;
+  max-width: 46ch;
+}
+
+.flow {
   list-style: none;
   margin: 0 0 3rem;
   padding: 0;
+  counter-reset: flow;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
+  gap: 0 2rem;
 }
-.anatomy-steps li {
-  padding: 1.5rem 2rem 0 0;
-  border-top: 2px solid var(--ink);
+.flow li {
+  position: relative;
+  counter-increment: flow;
+  padding-top: 3.6rem;
 }
-.anatomy-steps li + li {
-  padding-left: 2rem;
-  border-left: 1px solid var(--rule);
+/* The rail, running behind the nodes and on into the next stage. */
+.flow li::before {
+  content: '';
+  position: absolute;
+  top: 1.15rem;
+  left: 0;
+  right: -2rem;
+  height: 2px;
+  background: var(--rule);
 }
-.anatomy-when {
-  margin: 0 0 0.8rem;
+.flow li:last-child::before {
+  right: 0;
+  background: linear-gradient(to right, var(--rule) 55%, transparent);
+}
+/* Chevron pointing into the next stage. */
+.flow li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0.79rem;
+  right: -2rem;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--rule-strong);
+  border-right: 2px solid var(--rule-strong);
+  transform: rotate(45deg);
+}
+.flow-node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+.flow-node::before { content: counter(flow); }
+.flow-when {
+  margin: 0 0 0.55rem;
   font-family: var(--font-body);
   font-weight: 510;
   font-size: 0.68rem;
@@ -430,8 +499,8 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   letter-spacing: 0.1em;
   color: var(--accent);
 }
-.anatomy-steps h3 { margin: 0 0 0.55rem; font-size: 1.15rem; }
-.anatomy-steps li > p:last-child { margin: 0; color: var(--muted); font-size: 0.97rem; }
+.flow h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.flow li > p:last-child { margin: 0; color: var(--muted); font-size: 0.97rem; }
 
 .anatomy-facts {
   list-style: none;
@@ -463,7 +532,7 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 .anatomy-facts li > p:last-child { margin: 0; color: var(--muted); font-size: 0.97rem; }
 
 /* Inline links in body copy on light grounds. */
-.anatomy-steps a,
+.flow a,
 .anatomy-facts a,
 .schedule-body a,
 .join-copy a {
@@ -474,7 +543,7 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
-.anatomy-steps a:hover,
+.flow a:hover,
 .anatomy-facts a:hover,
 .schedule-body a:hover,
 .join-copy a:hover { color: var(--accent); }
@@ -826,9 +895,23 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   .section-head h2 { max-width: 22ch; }
   .hero-grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
   .hero { padding: 4.5rem 0 4rem; }
-  .anatomy-steps { grid-template-columns: 1fr; }
-  .anatomy-steps li { padding-right: 0; padding-bottom: 1.5rem; }
-  .anatomy-steps li + li { padding-left: 0; border-left: none; border-top: 1px solid var(--rule); }
+  .flow { grid-template-columns: 1fr; gap: 0; }
+  .flow li { padding: 0 0 2rem 3.6rem; }
+  .flow li:last-child { padding-bottom: 0; }
+  .flow li::before {
+    top: 0;
+    left: 1.07rem;
+    right: auto;
+    width: 2px;
+    height: 100%;
+  }
+  .flow li:last-child::before {
+    height: 2.3rem;
+    background: var(--rule);
+  }
+  .flow li:not(:last-child)::after { display: none; }
+  .flow-node { top: 0; left: 0; }
+  .anatomy-head-row h2 { font-size: 1.5rem; }
   .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .team-avatar { max-width: 150px; }
 }
