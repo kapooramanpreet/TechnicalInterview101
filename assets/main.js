@@ -14,8 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const cards = document.querySelectorAll('.feature-card');
-  if ('IntersectionObserver' in window) {
+  // Progressive reveal. Everything is visible by default; this only adds the
+  // fade-up when IntersectionObserver is available.
+  const revealables = document.querySelectorAll(
+    '.claim, .points li, .anatomy-steps li, .anatomy-facts li, .cohort-card, .team-card'
+  );
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -25,11 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.12, rootMargin: '0px 0px -40px' }
     );
-    cards.forEach((card) => {
-      card.classList.add('fade-ready');
-      observer.observe(card);
+    revealables.forEach((el, i) => {
+      el.classList.add('fade-ready');
+      el.style.setProperty('--reveal-delay', (i % 4) * 60 + 'ms');
+      observer.observe(el);
     });
   }
 });

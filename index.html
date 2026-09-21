@@ -42,13 +42,19 @@
         </a>
       </nav>
       <!--
-        The units are named in full in the partners strip below, so these
-        repeat marks are hidden from assistive tech.
+        These marks are the only attribution on the page now that the partners
+        strip is gone, so they carry real alt text and tooltips.
       -->
-      <span class="header-units" aria-hidden="true">
-        <img src="assets/logos/uf-cise.png" alt="" width="144" height="143" />
-        <img src="assets/logos/uf-eed.png" alt="" width="143" height="143" />
-        <img class="header-pg" src="assets/logos/procter-and-gamble.svg" alt="" width="720" height="720" />
+      <span class="header-units">
+        <img src="assets/logos/uf-cise.png" width="144" height="143"
+             alt="UF Computer &amp; Information Science &amp; Engineering"
+             title="University of Florida Herbert Wertheim College of Engineering &mdash; Computer &amp; Information Science &amp; Engineering" />
+        <img src="assets/logos/uf-eed.png" width="143" height="143"
+             alt="UF Engineering Education"
+             title="University of Florida Herbert Wertheim College of Engineering &mdash; Engineering Education" />
+        <img class="header-pg" src="assets/logos/procter-and-gamble.svg" width="720" height="720"
+             alt="Procter &amp; Gamble"
+             title="Supported by the Procter &amp; Gamble Higher Education Grant" />
       </span>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -58,52 +64,42 @@
 
   <main>
     <section class="hero" id="top">
-      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Workshop Series &middot; Fall 2026 &amp; Spring 2027</p>
-          <h1>Technical Interview 101</h1>
+          <p class="hero-kicker">Workshop Series &middot; Fall 2026 &amp; Spring 2027</p>
+          <h1>Technical<br />Interview&nbsp;101</h1>
           <p class="hero-sub">
             A free series of AI-assisted workshops that build the problem-solving skills real
             technical interviews demand.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf4A6VCvNyYOnJKhMVTSGPOsNImv4XImbioimQhNrmsUsEOxw/viewform" target="_blank" rel="noopener">
-              Express Interest
-            </a>
-            <a class="btn btn-ghost" href="#program">See What You'll Learn</a>
+            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf4A6VCvNyYOnJKhMVTSGPOsNImv4XImbioimQhNrmsUsEOxw/viewform" target="_blank" rel="noopener">Express Interest</a>
+            <a class="btn btn-ghost" href="#program">What you'll do</a>
           </div>
-          <ul class="hero-badges">
-            <li>7 workshops in fall &middot; 10 in spring</li>
-            <li>In-person or self-paced remote</li>
-            <li>No cost to participate</li>
-          </ul>
         </div>
-        <div class="hero-panel">
-          <p class="hero-panel-label">Series at a glance</p>
-          <ul class="hero-panel-list">
-            <li>
-              <span class="hero-panel-key">Workshops</span>
-              <span class="hero-panel-val">7 in fall &middot; 10 in spring</span>
-            </li>
-            <li>
-              <span class="hero-panel-key">Meets</span>
-              <span class="hero-panel-val">Wednesdays, 5:30&ndash;7:00 p.m.</span>
-            </li>
-            <li>
-              <span class="hero-panel-key">Formats</span>
-              <span class="hero-panel-val">In-person or self-paced remote</span>
-            </li>
-            <li>
-              <span class="hero-panel-key">Platform</span>
-              <span class="hero-panel-val"><a href="https://edugator.app/" target="_blank" rel="noopener">Edugator.app</a></span>
-            </li>
-            <li>
-              <span class="hero-panel-key">Cost</span>
-              <span class="hero-panel-val">Free &mdash; no cost to participate</span>
-            </li>
-          </ul>
-        </div>
+
+        <dl class="hero-facts">
+          <div>
+            <dt>Meets</dt>
+            <dd>Wednesdays, 5:30&ndash;7:00 p.m.</dd>
+          </div>
+          <div>
+            <dt>Workshops</dt>
+            <dd>7 in fall &middot; 10 in spring</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>In person, or self-paced remote</dd>
+          </div>
+          <div>
+            <dt>Platform</dt>
+            <dd><a href="https://edugator.app/" target="_blank" rel="noopener">Edugator.app</a></dd>
+          </div>
+          <div>
+            <dt>Cost</dt>
+            <dd>Free</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -112,213 +108,112 @@
       (the highest-resolution copy available); if higher-res originals turn up, drop
       them in at the same paths and nothing else needs to change.
     -->
-    <section class="partners" aria-label="Workshop series partners and sponsor">
-      <div class="container partners-inner">
-        <p class="partners-label">Presented by</p>
-
-        <ul class="partners-list">
-          <li>
-            <img
-              class="partner-logo"
-              src="assets/logos/uf-cise.png"
-              alt="University of Florida Herbert Wertheim College of Engineering &mdash; Computer &amp; Information Science &amp; Engineering"
-              width="144"
-              height="143"
-            />
-          </li>
-
-          <li>
-            <img
-              class="partner-logo"
-              src="assets/logos/uf-eed.png"
-              alt="University of Florida Herbert Wertheim College of Engineering &mdash; Engineering Education"
-              width="143"
-              height="143"
-            />
-          </li>
-
-          <li class="partner-pg">
-            <img
-              src="assets/logos/procter-and-gamble.svg"
-              alt="Procter &amp; Gamble"
-              width="86"
-              height="86"
-            />
-          </li>
-        </ul>
-
-        <p class="partners-note">
-          Supported by the <strong>Procter &amp; Gamble Higher Education Grant</strong>.
-        </p>
-      </div>
-    </section>
-
-    <section class="features" id="program">
+    <section class="program" id="program">
       <div class="container">
-        <p class="eyebrow eyebrow-center">Why this program</p>
-        <h2>Built to make interview prep actually work</h2>
-        <p class="section-sub">
-          Technical Interview 101 pairs a structured workshop series with hands-on coding practice and an
-          active research study &mdash; so the program keeps improving based on real evidence of what helps
-          students learn.
-        </p>
+        <header class="section-head">
+          <p class="section-label">The program</p>
+          <div class="section-head-body">
+            <h2>Interview skill is practiced, not absorbed</h2>
+            <p class="lede">
+              Technical Interview 101 is built at the University of Florida and delivered on
+              <a href="https://edugator.app/" target="_blank" rel="noopener">Edugator.app</a>, a
+              UF-affiliated, LeetCode-style platform made for structured practice. It is a guided path
+              from fundamentals to interview-day readiness &mdash; taught live, practiced out loud, and
+              backed by weekly problem sets rather than a pile of solutions to memorize.
+            </p>
+          </div>
+        </header>
 
-        <div class="bento-grid">
-          <article class="feature-card bento-a">
-            <span class="bento-a-tag">Core to the series</span>
-            <div class="feature-icon" style="--icon-color: var(--accent)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-linecap="round"/>
-                <circle cx="12" cy="12" r="4.5"/>
-              </svg>
-            </div>
-            <h3>AI-Assisted Practice</h3>
-            <p>Work through interview-style problems alongside AI coding agents built into your prep &mdash; not just static solutions to memorize.</p>
-          </article>
+        <figure class="claim">
+          <blockquote>
+            Students who deliberately practice technical interviewing &mdash; rehearsing out loud, under
+            time, against real problems &mdash; convert more interviews into offers than students who
+            only study the underlying material.
+          </blockquote>
+          <figcaption>
+            Research by <strong>Amanpreet Kapoor</strong>, University of Florida
+          </figcaption>
+        </figure>
 
-          <article class="feature-card bento-b">
-            <div class="feature-icon" style="--icon-color: var(--moss)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H12v16H6.5A2.5 2.5 0 0 1 4 17.5v-11Z"/>
-                <path d="M20 6.5A2.5 2.5 0 0 0 17.5 4H12v16h5.5a2.5 2.5 0 0 0 2.5-2.5v-11Z"/>
-              </svg>
-            </div>
-            <h3>Structured Curriculum</h3>
-            <p>A complete, guided path &mdash; not a random problem set &mdash; from fundamentals to interview-day readiness.</p>
-          </article>
-
-          <article class="feature-card bento-c">
-            <div class="feature-icon" style="--icon-color: var(--moss)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <path d="m8 9 3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M13 15h3" stroke-linecap="round"/>
-                <rect x="3" y="4" width="18" height="16" rx="2"/>
-              </svg>
-            </div>
-            <h3>Hands-On Practice on Edugator</h3>
-            <p>Solve real coding problems on <a href="https://edugator.app/" target="_blank" rel="noopener">Edugator.app</a>, the UF-affiliated LeetCode-style platform built for this program.</p>
-          </article>
-
-          <article class="feature-card bento-d">
-            <div class="feature-icon" style="--icon-color: var(--moss)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <path d="M3 3v16a2 2 0 0 0 2 2h16" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M7 15l4-5 3 3 5-7" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Research-Backed Design</h3>
-            <p>Effectiveness is measured with a validated survey, not guesswork.</p>
-          </article>
-
-          <article class="feature-card bento-e">
-            <div class="feature-icon" style="--icon-color: var(--moss)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <path d="M12 3 2 8l10 5 10-5-10-5Z" stroke-linejoin="round"/>
-                <path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Two Ways to Take Part</h3>
-            <p>A weekly in-person workshop with peer and instructor support (University of Florida students), or a self-paced remote option with AI assistance.</p>
-          </article>
-
-          <article class="feature-card feature-banner bento-f">
-            <div class="feature-icon" style="--icon-color: var(--accent)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <circle cx="11" cy="11" r="7"/>
-                <path d="m21 21-4.3-4.3" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Learn What Actually Works</h3>
-              <p>Part of an active research study asking whether AI-assisted teaching genuinely improves interview readiness.</p>
-            </div>
-          </article>
-        </div>
+        <ol class="points">
+          <li>
+            <p class="point-num">01</p>
+            <h3>Taught live, not self-serve</h3>
+            <p>Every topic opens with real instruction &mdash; the concepts, the vocabulary, and the patterns that make the problems tractable.</p>
+          </li>
+          <li>
+            <p class="point-num">02</p>
+            <h3>Practiced out loud</h3>
+            <p>Problems are worked through together, spoken aloud, the way you are expected to reason in a room with an interviewer.</p>
+          </li>
+          <li>
+            <p class="point-num">03</p>
+            <h3>AI as a study partner</h3>
+            <p>You work alongside AI coding agents built into your prep &mdash; used to pressure-test your thinking, not to hand you answers.</p>
+          </li>
+          <li>
+            <p class="point-num">04</p>
+            <h3>Two ways to take part</h3>
+            <p>A weekly in-person workshop with peer and instructor support for UF students, or a self-paced remote track with AI assistance.</p>
+          </li>
+        </ol>
 
         <div class="anatomy">
-          <h3 class="anatomy-title">What a workshop looks like</h3>
-          <p class="anatomy-sub">
-            Every session runs 90 minutes and follows the same shape, so you always know what you are
-            walking into.
-          </p>
+          <header class="section-head">
+            <p class="section-label">A single session</p>
+            <div class="section-head-body">
+              <h2>What ninety minutes looks like</h2>
+              <p class="lede">Every session follows the same shape, so you always know what you are walking into.</p>
+            </div>
+          </header>
 
           <ol class="anatomy-steps">
             <li>
-              <span class="anatomy-when">First 20&ndash;30 min</span>
-              <h4>Core content, taught</h4>
-              <p>A focused lesson on the week's topic &mdash; the concepts, the vocabulary, and the patterns that make the problems tractable.</p>
+              <p class="anatomy-when">First 20&ndash;30 min</p>
+              <h3>Core content, taught</h3>
+              <p>A focused lesson on the week's topic, from the ground up.</p>
             </li>
             <li>
-              <span class="anatomy-when">Rest of the session</span>
-              <h4>3&ndash;4 worked problems</h4>
-              <p>Worked examples and problems solved together, out loud, the way you would be expected to reason through them in a real interview.</p>
+              <p class="anatomy-when">Rest of the session</p>
+              <h3>3&ndash;4 worked problems</h3>
+              <p>Examples solved together, out loud, start to finish.</p>
             </li>
             <li>
-              <span class="anatomy-when">During the week</span>
-              <h4>3 problems on your own</h4>
-              <p>Three more problems assigned on Edugator, to be worked through before the next session.</p>
+              <p class="anatomy-when">During the week</p>
+              <h3>3 problems on your own</h3>
+              <p>Assigned on Edugator, due before the next session.</p>
             </li>
           </ol>
 
           <ul class="anatomy-facts">
             <li>
-              <span class="anatomy-fact-key">Expected weekly effort</span>
-              <span class="anatomy-fact-val">5&ndash;6 hours</span>
-              <p>The 90-minute session plus independent practice. Students who put in less than this tend not to get much out of the series.</p>
+              <p class="anatomy-fact-val">5&ndash;6 hrs</p>
+              <p class="anatomy-fact-key">Expected weekly effort</p>
+              <p>The session plus independent practice. Less than this and the series will not do much for you.</p>
             </li>
             <li>
-              <span class="anatomy-fact-key">Assumed background</span>
-              <span class="anatomy-fact-val">Python basics &middot; CS1 complete</span>
-              <p>We assume you know the basics of Python and have finished a CS1 course. No prior interview experience is expected.</p>
+              <p class="anatomy-fact-val">CS1 + Python</p>
+              <p class="anatomy-fact-key">Assumed background</p>
+              <p>We assume Python basics and a completed CS1 course. No prior interview experience needed.</p>
             </li>
           </ul>
-        </div>
-
-        <div class="about-inner" id="about">
-          <div>
-            <p class="eyebrow">About the project</p>
-            <h2>Workshops, research, and platform &mdash; built together</h2>
-            <p>
-              Technical Interview 101 is being developed at the University of Florida. Beyond teaching
-              the material, the project studies how AI coding agents can support interview prep, using
-              a validated pre/post survey to measure real learning outcomes.
-            </p>
-            <p>
-              The end goal: a complete workshop series, a research-backed assessment tool, and a clear
-              answer to whether AI-assisted teaching actually improves interview readiness.
-            </p>
-          </div>
-          <div class="about-card">
-            <p class="about-card-label">Delivered on</p>
-            <p class="about-card-value"><a href="https://edugator.app/" target="_blank" rel="noopener">Edugator.app</a></p>
-            <p class="about-card-desc">A UF-affiliated, LeetCode-style coding platform built for structured practice.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!--
-      COHORT DATES: both cohorts meet Wednesdays, 5:30-7:00 p.m.
-      Fall 2026 runs Oct 7 - Dec 2 as a 7-session subset: Nov 11 (Veterans Day) and
-      Nov 25 (Thanksgiving week) are unavailable, Introduction + Arrays share the
-      first session, and Dynamic Programming and Greedy are left to Spring. It covers
-      the fundamentals through Graphs, then Common Interview Patterns on Dec 2.
-      Spring 2027 runs Jan 20 - Mar 31 and covers the full series over 10 sessions,
-      splitting DP and Greedy apart and spreading Common Interview Patterns across
-      two sessions. Feb 3 is skipped for the career fair.
-      If the real meeting dates or times change, update them BOTH here and in
-      assets/technical-interview-101.ics so the calendar download stays in sync.
-    -->
     <section class="schedule" id="schedule">
       <div class="container">
-        <p class="eyebrow eyebrow-center">Workshop schedule</p>
-        <h2>Seven workshops in fall, ten in spring</h2>
-        <p class="section-sub">
-          Spring 2027 runs the full series across ten Wednesday sessions. Fall 2026 is a shorter
-          first run of seven, covering the fundamentals through graphs plus interview patterns,
-          shaped around the holidays. Every session pairs a short lesson with hands-on problems
-          on Edugator &mdash; expand any workshop to see what it covers.
-        </p>
+        <header class="section-head">
+          <p class="section-label">Schedule</p>
+          <div class="section-head-body">
+            <h2>Seven workshops in fall, ten in spring</h2>
+            <p class="lede">
+              Spring 2027 runs the full series across ten Wednesday sessions. Fall 2026 is a shorter
+              first run of seven, covering the fundamentals through graphs plus interview patterns,
+              shaped around the holidays. Expand any workshop to see what it covers.
+            </p>
+          </div>
+        </header>
 
         <ul class="cohort-grid">
           <li class="cohort-card">
@@ -366,7 +261,7 @@
               <div class="schedule-body">
                 <p>Getting set up on Edugator and using an AI coding agent as a study partner rather than an answer key &mdash; then straight into the techniques that show up in more interview questions than any other data structure.</p>
                 <ul>
-                  <li>Series structure, expectations, and the research study</li>
+                  <li>Series structure, expectations, and how to get the most out of it</li>
                   <li>Edugator setup, Python refresher, and Big-O notation</li>
                   <li>Two-pointer traversals and sliding window problems</li>
                   <li>Prefix sums, in-place modification, and space tradeoffs</li>
@@ -514,7 +409,7 @@
               <div class="schedule-body">
                 <p>Getting set up on Edugator and using an AI coding agent as a study partner rather than an answer key &mdash; then straight into the techniques that show up in more interview questions than any other data structure.</p>
                 <ul>
-                  <li>Series structure, expectations, and the research study</li>
+                  <li>Series structure, expectations, and how to get the most out of it</li>
                   <li>Edugator setup, Python refresher, and Big-O notation</li>
                   <li>Two-pointer traversals and sliding window problems</li>
                   <li>Prefix sums, in-place modification, and space tradeoffs</li>
@@ -707,36 +602,19 @@
     </section>
 
     <section class="join" id="join">
-      <div class="join-bg" aria-hidden="true"></div>
       <div class="container join-inner">
-        <p class="eyebrow">Interest Form</p>
-        <h2>Technical Interview 101 Workshop Series</h2>
-        <p class="join-sub">
-          Use this form to express interest in participating in a series of 10 technical-interview
-          preparation workshops offered in either Fall or Spring. There is no cost for participating in
-          this program.
-        </p>
-        <p class="join-formats-label">You may choose one of two formats:</p>
-        <ul class="join-formats">
-          <li>
-            <span class="join-format-name">In person</span>
-            A weekly, 90-minute workshop with peer &amp; instructor support &mdash; only for University of
-            Florida students.
-          </li>
-          <li>
-            <span class="join-format-name">Remote</span>
-            A self-paced remote preparation option with AI assistance.
-          </li>
-        </ul>
-        <p class="join-sub">
-          The workshops focus on preparing for and practicing technical interviews. This form helps us
-          understand your goals and current experience level and determine whether the program is a good
-          fit for you for in-person participation, given we have limited seats.
-        </p>
-        <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSf4A6VCvNyYOnJKhMVTSGPOsNImv4XImbioimQhNrmsUsEOxw/viewform" target="_blank" rel="noopener">
-          Express Interest
-        </a>
-        <p class="join-note">Takes less than a minute &middot; No cost to participate</p>
+        <div class="join-copy">
+          <p class="section-label">Interest form</p>
+          <h2>Take part</h2>
+          <p>
+            Free, no cost to participate. Choose the weekly in-person workshop &mdash; UF students,
+            limited seats &mdash; or the self-paced remote track with AI assistance.
+          </p>
+        </div>
+        <div class="join-action">
+          <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSf4A6VCvNyYOnJKhMVTSGPOsNImv4XImbioimQhNrmsUsEOxw/viewform" target="_blank" rel="noopener">Express Interest</a>
+          <p class="join-note">Under a minute</p>
+        </div>
       </div>
     </section>
 
@@ -750,11 +628,13 @@
     -->
     <section class="team" id="team">
       <div class="container">
-        <p class="eyebrow eyebrow-center">Who's behind it</p>
-        <h2>The team</h2>
-        <p class="section-sub">
-          Technical Interview 101 is built by students and faculty at the University of Florida.
-        </p>
+        <header class="section-head">
+          <p class="section-label">Who's behind it</p>
+          <div class="section-head-body">
+            <h2>The team</h2>
+            <p class="lede">Built by students and faculty at the University of Florida.</p>
+          </div>
+        </header>
 
         <ul class="team-grid">
           <li class="team-card">
@@ -810,12 +690,9 @@
     <section class="contact" id="contact">
       <div class="container contact-inner">
         <div>
-          <p class="eyebrow">Questions?</p>
-          <h2>Get in Touch</h2>
-          <p>
-            Have questions about the workshop series, the research study, or how to get involved? Reach
-            out directly.
-          </p>
+          <p class="section-label">Questions?</p>
+          <h2>Get in touch</h2>
+          <p>Have questions about the workshop series or how to get involved? Reach out directly.</p>
         </div>
         <div class="contact-card">
           <p class="contact-card-label">Program Contact</p>
