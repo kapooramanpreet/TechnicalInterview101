@@ -6,10 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Technical Interview 101 Workshop Series
 X-WR-TIMEZONE:America/New_York
 X-WR-CALDESC:Meeting times for the Technical Interview 101 workshop series 
- - Wednesdays\, 5:30-7:00 p.m. Eastern. Fall 2026 (Oct 7 - Nov 18) is a 6-s
- ession run through graphs\, with no meeting Nov 11 or Nov 25; start date t
- entative. Spring 2027 (Jan 20 - Mar 31) runs the full 10-session series\, 
- with no meeting Feb 3.
+ - Wednesdays\, 5:30-7:00 p.m. Eastern. Fall 2026 (Oct 7 - Dec 2) runs 7 se
+ ssions\, with no meeting Nov 11 or Nov 25 for UF holidays. Spring 2027 (Ja
+ n 20 - Mar 31) runs the full 10-session series\, with no meeting Feb 3 for
+  the career fair.
 BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -98,6 +98,20 @@ DTEND;TZID=America/New_York:20261118T190000
 SUMMARY:Technical Interview 101 (Fall 2026) - Session 6: Graphs
 DESCRIPTION:Adjacency lists\, BFS and DFS\, cycle detection\, topological s
  ort\, shortest paths.
+LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
+URL:https://edugator.app/
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ti101-fall2026-s07@technical-interviews-101
+DTSTAMP:20260921T120000Z
+DTSTART;TZID=America/New_York:20261202T173000
+DTEND;TZID=America/New_York:20261202T190000
+SUMMARY:Technical Interview 101 (Fall 2026) - Session 7: Common Interview P
+ atterns
+DESCRIPTION:Pattern recognition under time pressure\, talking through your 
+ approach\, clarifying questions and edge cases\, and mock interview practi
+ ce.
 LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
 URL:https://edugator.app/
 TRANSP:OPAQUE
