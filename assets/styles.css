@@ -15,9 +15,9 @@
   --accent: #EE5622;
   --accent-dark: #C9410F;
   --moss: #2E6BB8;
-  --sand: #DCE8F7;
+  --sand: #E7E9EE;
   --ink: #14294F;
-  --surface: #EAF2FC;
+  --surface: #F4F5F7;
   --card: #FFFFFF;
   --white: #FFFFFF;
 
@@ -26,11 +26,11 @@
   --rule: rgba(20, 41, 79, 0.14);
   --rule-strong: rgba(20, 41, 79, 0.26);
 
-  --font-display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  --font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --radius: 3px;
+  --radius: 8px;
   --container: 1120px;
   --gutter: 2rem;
   --header-h: 90px;
@@ -44,6 +44,7 @@ body {
   color: var(--ink);
   background: var(--white);
   line-height: 1.55;
+  font-feature-settings: 'cv05' 1;
   -webkit-font-smoothing: antialiased;
 }
 img, svg { display: block; max-width: 100%; }
@@ -51,11 +52,13 @@ a { color: inherit; text-decoration: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+  font-weight: 700;
+  font-stretch: 75%;
+  letter-spacing: -0.005em;
+  line-height: 1.1;
   margin: 0;
 }
+h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 
 .container {
   width: 100%;
@@ -69,7 +72,8 @@ h1, h2, h3, h4 {
 /* Small mono label that opens a section or a field. */
 .section-label {
   margin: 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -121,10 +125,10 @@ h1, h2, h3, h4 {
   padding: 0.85rem 1.6rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 560;
   font-size: 0.92rem;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.005em;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
@@ -163,7 +167,8 @@ h1, h2, h3, h4 {
 .logo-lines { display: flex; flex-direction: column; min-width: 0; }
 .logo-title {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
+  font-stretch: 88%;
   font-size: 1.28rem;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -175,7 +180,7 @@ h1, h2, h3, h4 {
   gap: 1.9rem;
   margin: 0 auto;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 510;
 }
 .site-nav > a:not(.btn) {
   position: relative;
@@ -208,8 +213,8 @@ h1, h2, h3, h4 {
   padding-left: 1.4rem;
   border-left: 1px solid var(--rule);
 }
-.header-units img { width: auto; height: 34px; }
-.header-pg { height: 30px !important; }
+.header-units img { width: auto; height: 41px; }
+.header-pg { height: 36px !important; }
 
 .nav-toggle {
   display: none;
@@ -259,7 +264,8 @@ h1, h2, h3, h4 {
   margin: 0 0 1.6rem;
   padding-bottom: 1.1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -292,7 +298,8 @@ h1, h2, h3, h4 {
 .hero-facts > div:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
 .hero-facts dt {
   flex-shrink: 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -325,15 +332,17 @@ h1, h2, h3, h4 {
 .claim blockquote {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  font-stretch: 88%;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   line-height: 1.45;
   letter-spacing: -0.015em;
   max-width: 44ch;
 }
 .claim figcaption {
   margin-top: 1rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   color: var(--muted);
@@ -367,7 +376,8 @@ h1, h2, h3, h4 {
 }
 .point-num {
   margin: 0 0 0.9rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--accent);
@@ -405,7 +415,8 @@ h1, h2, h3, h4 {
 }
 .anatomy-when {
   margin: 0 0 0.8rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -427,14 +438,15 @@ h1, h2, h3, h4 {
 .anatomy-fact-val {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   letter-spacing: -0.03em;
   color: var(--primary);
 }
 .anatomy-fact-key {
   margin: 0.4rem 0 0.9rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -444,7 +456,7 @@ h1, h2, h3, h4 {
 
 /* ---------- Schedule ---------- */
 
-.schedule { padding: 6rem 0; background: var(--surface); }
+.schedule { padding: 6rem 0; }
 
 .cohort-grid {
   list-style: none;
@@ -458,7 +470,8 @@ h1, h2, h3, h4 {
 .cohort-card + .cohort-card { padding-left: 2rem; border-left: 1px solid var(--rule); }
 .cohort-term {
   margin: 0 0 0.7rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -467,14 +480,16 @@ h1, h2, h3, h4 {
 .cohort-dates {
   margin: 0 0 0.3rem;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
+  font-stretch: 88%;
   font-size: 1.32rem;
   letter-spacing: -0.02em;
 }
 .cohort-time { margin: 0; color: var(--muted); font-size: 0.97rem; }
 .cohort-count {
   margin: 0.5rem 0 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -492,9 +507,9 @@ h1, h2, h3, h4 {
 .schedule-actions-note code {
   font-family: var(--font-mono);
   font-size: 0.85em;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--rule);
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 0.05rem 0.3rem;
 }
 
@@ -508,7 +523,8 @@ h1, h2, h3, h4 {
 }
 .schedule-term + .schedule-list + .schedule-term { margin-top: 3.5rem; }
 .schedule-term span {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-weight: 400;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -529,7 +545,7 @@ h1, h2, h3, h4 {
   list-style: none;
   transition: background-color 0.15s ease;
 }
-.schedule-item summary:hover { background: rgba(255, 255, 255, 0.55); }
+.schedule-item summary:hover { background: var(--surface); }
 .schedule-item summary::-webkit-details-marker { display: none; }
 .schedule-item summary::after {
   content: '';
@@ -543,12 +559,13 @@ h1, h2, h3, h4 {
   transition: transform 0.2s ease;
 }
 .schedule-item[open] summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
-.schedule-item[open] summary { background: rgba(255, 255, 255, 0.55); }
+.schedule-item[open] summary { background: var(--surface); }
 .schedule-item summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .schedule-week {
   flex-shrink: 0;
   width: 5.5rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   color: var(--accent);
@@ -557,13 +574,16 @@ h1, h2, h3, h4 {
   flex: 1;
   min-width: 0;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
+  font-stretch: 90%;
   font-size: 1.08rem;
   letter-spacing: -0.01em;
 }
 .schedule-date {
   flex-shrink: 0;
-  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.78rem;
   color: var(--muted);
 }
@@ -605,9 +625,9 @@ h1, h2, h3, h4 {
 .schedule-body code {
   font-family: var(--font-mono);
   font-size: 0.88em;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--rule);
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 0.05rem 0.3rem;
 }
 
@@ -628,7 +648,8 @@ h1, h2, h3, h4 {
 .join-action { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
 .join-note {
   margin: 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.5);
@@ -653,23 +674,21 @@ h1, h2, h3, h4 {
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: var(--radius);
   margin-bottom: 1rem;
   display: grid;
   place-items: center;
   background: var(--sand);
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 2rem;
   color: var(--primary);
-  filter: grayscale(1) contrast(1.02);
-  transition: filter 0.25s ease;
 }
-.team-card:hover .team-avatar { filter: grayscale(0); }
 .team-name {
   margin: 0 0 0.2rem;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
+  font-stretch: 90%;
   font-size: 1.02rem;
 }
 .team-email {
@@ -684,7 +703,8 @@ h1, h2, h3, h4 {
   margin: 3.5rem 0 1.2rem;
   padding-top: 1.4rem;
   border-top: 1px solid var(--rule);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -729,7 +749,8 @@ h1, h2, h3, h4 {
 .contact-card { flex-shrink: 0; }
 .contact-card-label {
   margin: 0 0 0.35rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 510;
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -738,7 +759,8 @@ h1, h2, h3, h4 {
 .contact-card-name {
   margin: 0 0 1rem;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
+  font-stretch: 88%;
   font-size: 1.2rem;
 }
 
