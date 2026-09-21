@@ -72,11 +72,10 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 .section-label {
   margin: 0;
   font-family: var(--font-body);
-  font-weight: 510;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.88rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.11em;
   color: var(--accent);
 }
 
