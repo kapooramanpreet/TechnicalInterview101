@@ -33,7 +33,7 @@
   --radius: 3px;
   --container: 1120px;
   --gutter: 2rem;
-  --header-h: 82px;
+  --header-h: 90px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -159,13 +159,13 @@ h1, h2, h3, h4 {
 }
 .header-brand { flex-shrink: 0; }
 .logo { display: flex; align-items: center; gap: 0.7rem; }
-.logo-mark { flex-shrink: 0; width: auto; height: 38px; }
+.logo-mark { flex-shrink: 0; width: auto; height: 46px; }
 .logo-lines { display: flex; flex-direction: column; min-width: 0; }
 .logo-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-size: 1.28rem;
+  letter-spacing: -0.015em;
   color: var(--ink);
 }
 
@@ -253,6 +253,8 @@ h1, h2, h3, h4 {
   gap: 4rem;
   align-items: end;
 }
+/* Without this the h1's min-content width can force the column past the screen. */
+.hero-copy { min-width: 0; }
 .hero-kicker {
   margin: 0 0 1.6rem;
   padding-bottom: 1.1rem;
@@ -336,7 +338,19 @@ h1, h2, h3, h4 {
   letter-spacing: 0.06em;
   color: var(--muted);
 }
-.claim figcaption strong { color: var(--ink); }
+.claim figcaption {
+  max-width: 58ch;
+  line-height: 1.65;
+}
+.claim figcaption cite { font-style: italic; }
+.claim figcaption a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.claim figcaption a:hover { color: var(--accent); }
 
 /* Numbered points, on rules, two up. */
 .points {
@@ -628,8 +642,8 @@ h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2.5rem 2rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
 }
 .team-card { text-align: left; }
 .team-avatar {
@@ -745,7 +759,7 @@ h1, h2, h3, h4 {
   .anatomy-steps { grid-template-columns: 1fr; }
   .anatomy-steps li { padding-right: 0; padding-bottom: 1.5rem; }
   .anatomy-steps li + li { padding-left: 0; border-left: none; border-top: 1px solid var(--rule); }
-  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .team-avatar { max-width: 150px; }
 }
 
@@ -781,7 +795,12 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 720px) {
-  :root { --gutter: 1.25rem; }
+  :root { --gutter: 1.25rem; --header-h: 76px; }
+  /* The enlarged wordmark does not fit beside the toggle on a phone. */
+  .header-inner { gap: 0.75rem; }
+  .logo { gap: 0.55rem; }
+  .logo-mark { height: 38px; }
+  .logo-title { font-size: 1.05rem; }
   .program, .schedule, .team { padding: 4rem 0; }
   .contact { padding-bottom: 4rem; }
   .anatomy { margin-top: 4rem; }
@@ -804,9 +823,28 @@ h1, h2, h3, h4 {
   .join-action .btn { width: 100%; justify-content: center; }
 }
 
+@media (max-width: 720px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 480px) {
   .team-grid { grid-template-columns: 1fr; gap: 2rem; }
   .team-avatar { max-width: 140px; }
+}
+
+/* Very narrow phones: the two-up fact rows and the tracked-out kicker stop fitting. */
+@media (max-width: 400px) {
+  :root { --gutter: 1rem; }
+  .hero-kicker { letter-spacing: 0.1em; }
+  .hero-facts > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .hero-facts dd { text-align: left; }
+  .logo-title { font-size: 0.98rem; }
+  .logo-mark { height: 34px; }
+  .hero h1 { font-size: 2.6rem; }
 }
 
 /* ---------- Motion ---------- */
