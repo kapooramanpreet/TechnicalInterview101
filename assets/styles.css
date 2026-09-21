@@ -370,6 +370,42 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 .claim figcaption a:hover { color: var(--accent); }
 
 
+/* A student's own account, set apart from the research finding above it. */
+.voice {
+  margin: 3.5rem 0 0;
+  padding: 2.5rem 2.75rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.voice blockquote {
+  margin: 0;
+  max-width: 68ch;
+}
+.voice blockquote p {
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.voice blockquote p:last-child { margin-bottom: 0; }
+.voice figcaption {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  max-width: 68ch;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.voice-who { font-weight: 600; color: var(--ink); }
+.voice-cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--faint);
+}
+.voice-cite cite { font-style: italic; }
+
 /* ---------- A single session ---------- */
 
 .anatomy { margin-top: 6rem; }
@@ -817,6 +853,7 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   .contact { padding-bottom: 4rem; }
   .anatomy { margin-top: 4rem; }
   .claim { padding-left: 1.25rem; }
+  .voice { padding: 1.75rem 1.5rem; }
 
   .schedule-term-ics { margin-left: 0; }
   .schedule-item summary {
