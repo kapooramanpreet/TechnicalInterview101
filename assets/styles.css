@@ -26,14 +26,14 @@
   --rule: rgba(20, 41, 79, 0.14);
   --rule-strong: rgba(20, 41, 79, 0.26);
 
-  --font-display: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --radius: 8px;
   --container: 1120px;
   --gutter: 2rem;
-  --header-h: 90px;
+  --header-h: 100px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -52,13 +52,12 @@ a { color: inherit; text-decoration: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-stretch: 75%;
-  letter-spacing: -0.005em;
-  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
   margin: 0;
 }
-h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
+h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 
 .container {
   width: 100%;
@@ -129,6 +128,7 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   font-weight: 560;
   font-size: 0.92rem;
   letter-spacing: -0.005em;
+  white-space: nowrap;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
@@ -158,17 +158,17 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.1rem;
   min-height: var(--header-h);
 }
 .header-brand { flex-shrink: 0; }
 .logo { display: flex; align-items: center; gap: 0.7rem; }
-.logo-mark { flex-shrink: 0; width: auto; height: 46px; }
+.logo-mark { flex-shrink: 0; width: auto; height: 55px; }
 .logo-lines { display: flex; flex-direction: column; min-width: 0; }
 .logo-title {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: 1.22rem;
+  font-size: 1.46rem;
   letter-spacing: -0.035em;
   color: var(--ink);
 }
@@ -176,7 +176,7 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.9rem;
+  gap: 1.5rem;
   margin: 0 auto;
   font-size: 0.92rem;
   font-weight: 510;
@@ -207,13 +207,20 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 .header-units {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.6rem;
   flex-shrink: 0;
-  padding-left: 1.4rem;
+  padding-left: 1.1rem;
   border-left: 1px solid var(--rule);
 }
-.header-units img { width: auto; height: 41px; }
-.header-pg { height: 36px !important; }
+.header-units a {
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  transition: opacity 0.15s ease;
+}
+.header-units a:hover { opacity: 1; }
+.header-units img { width: auto; height: 51px; }
+.header-pg { height: 45px !important; }
 
 .nav-toggle {
   display: none;
@@ -263,7 +270,6 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 .hero h1 {
   font-family: var(--font-body);
   font-weight: 800;
-  font-stretch: normal;
   font-size: clamp(2.7rem, 7.6vw, 5rem);
   letter-spacing: -0.045em;
   line-height: 1.02;
@@ -276,6 +282,16 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.82);
 }
+.hero-sub a {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+}
+.hero-sub a:hover { color: var(--accent); }
+
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 
 /* Facts as a plain definition list on rules -- no card, no blur. */
@@ -318,16 +334,15 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 
 /* The one claim the whole series rests on, set as a pull quote. */
 .claim {
-  margin: 0 0 4.5rem;
+  margin: 0;
   padding: 0 0 0 2rem;
   border-left: 3px solid var(--accent);
 }
 .claim blockquote {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-stretch: 88%;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
   line-height: 1.45;
   letter-spacing: -0.015em;
   max-width: 44ch;
@@ -354,36 +369,6 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 }
 .claim figcaption a:hover { color: var(--accent); }
 
-/* Numbered points, on rules, two up. */
-.points {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 3.5rem;
-}
-.points li {
-  padding: 1.6rem 0 1.8rem;
-  border-top: 1px solid var(--rule);
-}
-.point-num {
-  margin: 0 0 0.9rem;
-  font-family: var(--font-body);
-  font-weight: 510;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--accent);
-}
-.points h3 {
-  margin: 0 0 0.6rem;
-  font-size: 1.22rem;
-}
-.points li > p:last-child {
-  margin: 0;
-  color: var(--muted);
-  max-width: 44ch;
-}
 
 /* ---------- A single session ---------- */
 
@@ -447,13 +432,30 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 }
 .anatomy-facts li > p:last-child { margin: 0; color: var(--muted); font-size: 0.97rem; }
 
+/* Inline links in body copy on light grounds. */
+.anatomy-steps a,
+.anatomy-facts a,
+.schedule-body a,
+.join-copy a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+.anatomy-steps a:hover,
+.anatomy-facts a:hover,
+.schedule-body a:hover,
+.join-copy a:hover { color: var(--accent); }
+
 /* ---------- Schedule ---------- */
 
 .schedule { padding: 6rem 0; }
 
 .cohort-grid {
   list-style: none;
-  margin: 0 0 2.5rem;
+  margin: 0 0 3.5rem;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -474,7 +476,6 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   margin: 0 0 0.3rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-stretch: 88%;
   font-size: 1.32rem;
   letter-spacing: -0.02em;
 }
@@ -489,23 +490,6 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   color: var(--faint);
 }
 
-.schedule-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.9rem 1.4rem;
-  margin-bottom: 3.5rem;
-}
-.schedule-actions-note { margin: 0; font-size: 0.88rem; color: var(--muted); max-width: 40ch; }
-.schedule-actions-note code {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  padding: 0.05rem 0.3rem;
-}
-
 .schedule-term {
   display: flex;
   flex-wrap: wrap;
@@ -515,15 +499,31 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   font-size: 1.5rem;
 }
 .schedule-term + .schedule-list + .schedule-term { margin-top: 3.5rem; }
-.schedule-term span {
+.schedule-term-name { flex-shrink: 0; }
+.schedule-term-meta {
   font-family: var(--font-body);
   font-weight: 510;
-  font-weight: 400;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--faint);
 }
+.schedule-term-ics {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-weight: 510;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.schedule-term-ics svg { width: 13px; height: 13px; }
+.schedule-term-ics:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* The accordion sits on hairlines, not in boxes. */
 .schedule-list { list-style: none; margin: 0; padding: 0; }
@@ -567,9 +567,8 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   flex: 1;
   min-width: 0;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-stretch: 90%;
-  font-size: 1.08rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   letter-spacing: -0.01em;
 }
 .schedule-date {
@@ -638,7 +637,8 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 .join .section-label { color: var(--accent); }
 .join h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin: 0.6rem 0 0.7rem; }
 .join-copy p { margin: 0; color: rgba(255, 255, 255, 0.78); line-height: 1.6; }
-.join-action { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+.join-copy strong { color: var(--white); font-weight: 700; }
+.join-action { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
 .join-note {
   margin: 0;
   font-family: var(--font-body);
@@ -680,9 +680,8 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
 .team-name {
   margin: 0 0 0.2rem;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-stretch: 90%;
-  font-size: 1.02rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 .team-email {
   font-size: 0.86rem;
@@ -753,7 +752,6 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   margin: 0 0 1rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-stretch: 88%;
   font-size: 1.2rem;
 }
 
@@ -770,7 +768,6 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   .section-head h2 { max-width: 22ch; }
   .hero-grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
   .hero { padding: 4.5rem 0 4rem; }
-  .points { grid-template-columns: 1fr; gap: 0; }
   .anatomy-steps { grid-template-columns: 1fr; }
   .anatomy-steps li { padding-right: 0; padding-bottom: 1.5rem; }
   .anatomy-steps li + li { padding-left: 0; border-left: none; border-top: 1px solid var(--rule); }
@@ -814,13 +811,14 @@ h3, h4 { font-stretch: 88%; letter-spacing: -0.01em; }
   /* The enlarged wordmark does not fit beside the toggle on a phone. */
   .header-inner { gap: 0.75rem; }
   .logo { gap: 0.55rem; }
-  .logo-mark { height: 38px; }
-  .logo-title { font-size: 1.05rem; }
+  .logo-mark { height: 42px; }
+  .logo-title { font-size: 1.12rem; }
   .program, .schedule, .team { padding: 4rem 0; }
   .contact { padding-bottom: 4rem; }
   .anatomy { margin-top: 4rem; }
-  .claim { margin-bottom: 3rem; padding-left: 1.25rem; }
+  .claim { padding-left: 1.25rem; }
 
+  .schedule-term-ics { margin-left: 0; }
   .schedule-item summary {
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
