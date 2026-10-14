@@ -552,9 +552,10 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   gap: 0.35rem 1rem;
   margin: 0 0 0.25rem;
   font-size: 1.5rem;
+  line-height: 1.12;
 }
 .schedule-term + .schedule-list + .schedule-term { margin-top: 3.5rem; }
-.schedule-term-name { flex-shrink: 0; }
+.schedule-term-name { flex-shrink: 0; font-size: inherit; }
 .schedule-term-meta {
   font-family: var(--font-body);
   font-weight: 510;
@@ -563,8 +564,8 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   letter-spacing: 0.1em;
   color: var(--faint);
 }
-.schedule-term-ics {
-  margin-left: auto;
+.schedule-term-ics,
+.schedule-term-slides summary {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -577,8 +578,66 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   padding-bottom: 2px;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
-.schedule-term-ics svg { width: 13px; height: 13px; }
-.schedule-term-ics:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.schedule-term-ics { margin-left: auto; }
+.schedule-term-ics svg,
+.schedule-term-slides summary svg { width: 13px; height: 13px; }
+.schedule-term-ics:hover,
+.schedule-term-slides summary:hover,
+.schedule-term-slides[open] summary { color: var(--accent); border-bottom-color: var(--accent); }
+
+/*
+  Slides menu. A <details> so it opens without JS; main.js only adds closing
+  on an outside click or Escape. Anchored to the right edge so it never runs
+  past the container.
+*/
+.schedule-term-slides { position: relative; }
+.schedule-term-slides summary { cursor: pointer; list-style: none; }
+.schedule-term-slides summary::-webkit-details-marker { display: none; }
+.schedule-term-slides summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.slides-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 10;
+  width: max-content;
+  min-width: 15rem;
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  line-height: 1.4;
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(20, 41, 79, 0.12);
+}
+.slides-menu a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 0.6rem 1rem;
+  transition: background-color 0.15s ease;
+}
+.slides-menu a:hover,
+.slides-menu a:focus-visible { background: var(--surface); outline: none; }
+.slides-menu-week {
+  font-weight: 510;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.slides-menu-title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+.slides-menu-type {
+  font-weight: 510;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
 
 /* The accordion sits on hairlines, not in boxes. */
 .schedule-list { list-style: none; margin: 0; padding: 0; }
@@ -924,6 +983,8 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
   .claim-right figcaption { margin-left: 0; }
 
   .schedule-term-ics { margin-left: 0; }
+  /* Keeps the right-anchored menu on screen wherever the row wraps. */
+  .schedule-term-slides { margin-left: auto; }
   .schedule-item summary {
     flex-wrap: wrap;
     gap: 0.4rem 1rem;

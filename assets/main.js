@@ -14,6 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // The slides menu is a <details>; close it on an outside click, on Escape,
+  // or once a deck has been picked.
+  document.querySelectorAll('.schedule-term-slides').forEach((menu) => {
+    document.addEventListener('click', (event) => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+    menu.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary').focus();
+      }
+    });
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => { menu.open = false; });
+    });
+  });
+
   // Progressive reveal. Everything is visible by default; this only adds the
   // fade-up when IntersectionObserver is available.
   const revealables = document.querySelectorAll(

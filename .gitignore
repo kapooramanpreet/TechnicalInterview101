@@ -11,3 +11,7 @@ TODO.md
 /*.jpg
 /*.jpeg
 /*.heic
+
+# Original slide decks, speaker notes included. The copies the page links to
+# have the notes stripped and live in assets/slides/.
+/*.pptx

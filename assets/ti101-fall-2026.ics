@@ -6,8 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Technical Interview 101 - Fall 2026
 X-WR-TIMEZONE:America/New_York
 X-WR-CALDESC:Technical Interview 101\, Fall 2026 cohort - Wednesdays\, 5:30
- -7:00 p.m. Eastern\, Oct 7 to Dec 2\, 2026. Seven sessions\; no meeting No
- v 11 or Nov 25 for UF holidays. Start date tentative.
+ -7:00 p.m. Eastern\, Oct 7 to Nov 18\, 2026. Six sessions\; no meeting Nov
+  11 for a UF holiday. Start date tentative.
 BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -94,19 +94,6 @@ DTEND;TZID=America/New_York:20261118T190000
 SUMMARY:Technical Interview 101 - Session 6: Graphs
 DESCRIPTION:Adjacency lists\, BFS and DFS\, cycle detection\, topological s
  ort\, shortest paths.
-LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
-URL:https://www.edugator.app/
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:ti101-fall2026-s07@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261202T173000
-DTEND;TZID=America/New_York:20261202T190000
-SUMMARY:Technical Interview 101 - Session 7: Common Interview Patterns
-DESCRIPTION:Pattern recognition under time pressure\, talking through your 
- approach\, clarifying questions and edge cases\, and mock interview practi
- ce.
 LOCATION:University of Florida (room TBA) / Edugator (edugator.app)
 URL:https://www.edugator.app/
 TRANSP:OPAQUE
