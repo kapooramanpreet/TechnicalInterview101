@@ -620,6 +620,7 @@ h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
 .slides-menu a:hover,
 .slides-menu a:focus-visible { background: var(--surface); outline: none; }
 .slides-menu-week {
+  font-variant-numeric: tabular-nums;
   font-weight: 510;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
