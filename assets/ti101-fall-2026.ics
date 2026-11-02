@@ -6,8 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Technical Interview 101 - Fall 2026
 X-WR-TIMEZONE:America/New_York
 X-WR-CALDESC:Technical Interview 101\, Fall 2026 cohort - Wednesdays\, 5:30
- -7:00 p.m. Eastern\, Oct 7 to Nov 18\, 2026. Six sessions\; no meeting Nov
-  11 for a UF holiday. Start date tentative.
+ -7:00 p.m. Eastern\, Oct 14 to Nov 25\, 2026. Six sessions\; no meeting No
+ v 11 for a UF holiday.
 BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -27,9 +27,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ti101-fall2026-s01@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261007T173000
-DTEND;TZID=America/New_York:20261007T190000
+DTSTAMP:20261102T151706Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261014T173000
+DTEND;TZID=America/New_York:20261014T190000
 SUMMARY:Technical Interview 101 - Session 1: Introduction + Arrays
 DESCRIPTION:Series structure\, Edugator setup\, working with an AI coding a
  gent\, Python and Big-O refresher\, then two pointers\, sliding window\, p
@@ -40,9 +41,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-fall2026-s02@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261014T173000
-DTEND;TZID=America/New_York:20261014T190000
+DTSTAMP:20261102T151706Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261021T173000
+DTEND;TZID=America/New_York:20261021T190000
 SUMMARY:Technical Interview 101 - Session 2: Strings
 DESCRIPTION:Palindromes\, anagrams\, frequency maps\, parsing\, and efficie
  nt string building.
@@ -52,9 +54,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-fall2026-s03@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261021T173000
-DTEND;TZID=America/New_York:20261021T190000
+DTSTAMP:20261102T151706Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261028T173000
+DTEND;TZID=America/New_York:20261028T190000
 SUMMARY:Technical Interview 101 - Session 3: Hash Tables
 DESCRIPTION:Dictionaries and sets\, space-for-time tradeoffs\, grouping and
   deduplication.
@@ -64,9 +67,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-fall2026-s04@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261028T173000
-DTEND;TZID=America/New_York:20261028T190000
+DTSTAMP:20261102T151706Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261104T173000
+DTEND;TZID=America/New_York:20261104T190000
 SUMMARY:Technical Interview 101 - Session 4: Trees
 DESCRIPTION:Binary trees and BSTs\, DFS traversals\, level-order traversal\
  , and recursion.
@@ -76,9 +80,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-fall2026-s05@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261104T173000
-DTEND;TZID=America/New_York:20261104T190000
+DTSTAMP:20261102T151706Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261118T173000
+DTEND;TZID=America/New_York:20261118T190000
 SUMMARY:Technical Interview 101 - Session 5: Priority Queues + Heaps
 DESCRIPTION:Min and max heaps\, heapq\, top-K problems\, merging sorted inp
  uts.
@@ -88,9 +93,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:ti101-fall2026-s06@technical-interviews-101
-DTSTAMP:20260921T120000Z
-DTSTART;TZID=America/New_York:20261118T173000
-DTEND;TZID=America/New_York:20261118T190000
+DTSTAMP:20261102T151706Z
+SEQUENCE:1
+DTSTART;TZID=America/New_York:20261125T173000
+DTEND;TZID=America/New_York:20261125T190000
 SUMMARY:Technical Interview 101 - Session 6: Graphs
 DESCRIPTION:Adjacency lists\, BFS and DFS\, cycle detection\, topological s
  ort\, shortest paths.
